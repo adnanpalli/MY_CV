@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{Full Name}} — CV</title>
+  <meta name="description" content="{{Full Name}} — Professional CV" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; /* dark navy */
+      --card:#0b1220;
+      --muted:#94a3b8;
+      --accent:#06b6d4; /* teal */
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;padding:32px;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial; background:linear-gradient(180deg,#071021 0%, #071827 60%); color:#e6eef6;
+      -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+    }
+    .wrap{max-width:980px;margin:0 auto;display:grid;grid-template-columns:320px 1fr;gap:28px}
+    @media (max-width:880px){.wrap{grid-template-columns:1fr;padding:0 12px}}
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:var(--radius);padding:22px;box-shadow:0 6px 20px rgba(2,6,23,0.6);}
+    .profile{display:flex;flex-direction:column;align-items:center;text-align:center}
+    .avatar{width:120px;height:120px;border-radius:20px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:36px;color:#021024;box-shadow:0 6px 18px rgba(3,7,18,0.7);}
+    h1{margin:14px 0 2px;font-size:20px}
+    h2{margin:0;font-weight:600;color:#fff}
+    p.small{margin:8px 0 0;color:var(--muted);font-size:13px}
+
+    .contact{margin-top:16px;font-size:14px;display:flex;flex-direction:column;gap:8px}
+    .contact a{color:var(--accent);text-decoration:none}
+    .section-title{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+    .section-title h3{margin:0;font-size:15px}
+    .skill-list{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:var(--glass);padding:8px 10px;border-radius:10px;font-size:13px;color:var(--muted)}
+
+    .experience{display:flex;flex-direction:column;gap:14px}
+    .job{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));padding:14px;border-radius:10px}
+    .job h4{margin:0;font-size:15px}
+    .muted{color:var(--muted);font-size:13px}
+    .dates{float:right;color:var(--muted);font-size:13px}
+
+    .education, .projects{display:flex;flex-direction:column;gap:12px}
+    .download{display:inline-block;margin-top:12px;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#7c3aed);color:#021024;text-decoration:none;font-weight:700}
+
+    /* printable tweaks */
+    @media print{body{background:white;color:black}.wrap{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <!-- LEFT COLUMN -->
+    <aside class="card">
+      <div class="profile">
+        <div class="avatar">{{FN}}</div>
+        <h1>{{Full Name}}</h1>
+        <p class="small">{{Job Title}} — {{Location}}</p>
+        <p class="small">{{One-line summary or objective (max 2 lines)}}</p>
+      </div>
+
+      <div class="contact">
+        <div class="section-title"><h3>Contact</h3></div>
+        <div class="muted">Email: <a href="mailto:you@example.com">you@example.com</a></div>
+        <div class="muted">Phone: +91 98765 43210</div>
+        <div class="muted">Website: <a href="https://your-site.example" target="_blank">your-site.example</a></div>
+        <div class="muted">GitHub: <a href="https://github.com/username" target="_blank">github.com/username</a></div>
+        <div class="muted">LinkedIn: <a href="https://linkedin.com/in/username" target="_blank">linkedin.com/in/username</a></div>
+      </div>
+
+      <hr style="margin:18px 0;border:0;border-top:1px solid rgba(255,255,255,0.03)">
+
+      <div>
+        <div class="section-title"><h3>Skills</h3></div>
+        <div class="skill-list">
+          <span class="skill">Skill One</span>
+          <span class="skill">Skill Two</span>
+          <span class="skill">Skill Three</span>
+          <span class="skill">Skill Four</span>
+          <span class="skill">Skill Five</span>
+        </div>
+      </div>
+
+      <div style="margin-top:16px">
+        <div class="section-title"><h3>Languages</h3></div>
+        <div class="muted">English — Professional</div>
+        <div class="muted">Kannada — Native</div>
+      </div>
+
+      <div style="margin-top:18px;text-align:center">
+        <a class="download" href="resume.pdf" download>Download PDF</a>
+      </div>
+
+    </aside>
+
+    <!-- RIGHT COLUMN -->
+    <section class="card">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:18px">
+        <div>
+          <h2>Experience</h2>
+          <p class="small">Selected roles & responsibilities</p>
+        </div>
+      </div>
+
+      <div class="experience" style="margin-top:12px">
+        <article class="job">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start">
+            <div>
+              <h4>{{Most Recent Job Title}} — <span class="muted">{{Company}}</span></h4>
+              <div class="muted">Short description: what you did, tech you used, impact (quantify when possible).</div>
+            </div>
+            <div class="dates">{{Start Date}} — {{End or Present}}</div>
+          </div>
+          <ul style="margin-top:10px;color:var(--muted)">
+            <li>Achievement / responsibility 1 (use numbers or % where possible).</li>
+            <li>Achievement / responsibility 2.</li>
+            <li>Achievement / responsibility 3.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start">
+            <div>
+              <h4>Previous Job Title — <span class="muted">Previous Company</span></h4>
+              <div class="muted">Short description: what you did and why it mattered.</div>
+            </div>
+            <div class="dates">{{Start Date}} — {{End Date}}</div>
+          </div>
+          <ul style="margin-top:10px;color:var(--muted)">
+            <li>Achievement / responsibility 1.</li>
+            <li>Achievement / responsibility 2.</li>
+          </ul>
+        </article>
+
+      </div>
+
+      <div style="margin-top:18px">
+        <div class="section-title"><h3>Education</h3></div>
+        <div class="education">
+          <div>
+            <strong>Bachelor of Something</strong> — University Name <span class="muted">(Year)</span>
+            <div class="muted">Relevant coursework or achievements.</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:18px">
+        <div class="section-title"><h3>Projects</h3></div>
+        <div class="projects">
+          <div>
+            <strong>Project Name</strong> — <span class="muted">Short tag (GitHub link)</span>
+            <div class="muted">1–2 line description of the project, tech stack and impact. <a href="https://github.com/username/project" target="_blank">View on GitHub</a></div>
+          </div>
+
+          <div style="margin-top:8px">
+            <strong>Another Project</strong> — <span class="muted">Tooling / demo</span>
+            <div class="muted">A short 1-line summary with link if available.</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:18px">
+        <div class="section-title"><h3>Certifications</h3></div>
+        <div class="muted">Certification Name — Issuer (Year)</div>
+      </div>
+
+      <div style="margin-top:18px">
+        <div class="section-title"><h3>Interests</h3></div>
+        <div class="muted">Short bullets: e.g., Open-source, Security, Hiking, Reading</div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer style="text-align:center;margin-top:28px;color:var(--muted);font-size:13px">Designed with ♥ — edit this file and replace placeholders with your details.</footer>
+</body>
+</html>
